@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "LAB디지털";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --back-clr: #f9ebde;
+  --clock-clr: #815854;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  background: var(--back-clr);
+}
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+.time_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+.main-title {
+  height: 20vh;
+  font-size: 4rem;
+  line-height: 2;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--back-clr);
+  background: var(--clock-clr);
+}
+
+.time_clock {
+  display: flex;
+  width: 100%;
+  margin-top: 100px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.hour {
+  width: 200px;
+  height: 200px;
+  min-width: 200px;
+  margin-right: 50px;
+  background: var(--back-clr);
+  border: 5px solid var(--clock-clr);
+  border-radius: 10px;
+}
+.hour::after {
+  position: relative;
+  top: 0px;
+  left: 70px;
+  content: ":";
+  font-size: 7em;
+  width: 10%;
+  height: 10%;
+  color: var(--clock-clr);
+}
+.minute {
+  width: 200px;
+  height: 200px;
+  min-width: 200px;
+  margin-right: 50px;
+  background: var(--back-clr);
+  border: 5px solid var(--clock-clr);
+  border-radius: 10px;
+}
+.minute::after {
+  position: relative;
+  top: 0px;
+  left: 70px;
+  content: ":";
+  font-size: 7em;
+  width: 10%;
+  height: 10%;
+  color: var(--clock-clr);
+}
+.sec {
+  width: 200px;
+  height: 200px;
+  min-width: 200px;
+  margin-right: 0;
+  background: var(--back-clr);
+  border: 5px solid var(--clock-clr);
+  border-radius: 10px;
+}
+.time_clock span {
+  position: relative;
+  top: 10px;
+  left: 30px;
+  font-size: 8rem;
+  color: var(--clock-clr);
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  font-family: "LAB디지털";
+}
+.sec span {
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+.exp {
+  color: var(--clock-clr);
+  font-size: 2rem;
+  text-align: center;
+  margin: 100px;
+}
+@media all and (max-width: 764px) {
+  .hour,
+  .minute,
+  .sec {
+    width: initial;
+    height: initial;
+    min-width: initial;
+    margin-right: initial;
+    background: initial;
+    border: initial;
+  }
+  .hour span,
+  .minute span,
+  .sec span {
+    position: relative;
+    top: 0;
+    font-size: 7rem;
+    margin-right: 20px;
+  }
+  .hour::after,
+  .minute::after {
+    content: ":";
+    font-size: 5em;
+    position: relative;
+    left: 20px;
+  }
+  .sec::after {
+    content: "";
+    font-size: 5em;
+    position: relative;
+    left: 20px;
+  }
+  .main-title {
+    font-size: 5vw;
+    line-height: 20vh;
+  }
+  .exp {
+    font-size: 3vw;
+    margin: 80px;
+  }
+}
+@media all and (max-width: 480px) {
+  .hour span,
+  .minute span,
+  .sec span {
+    position: relative;
+    top: 0;
+    left: 5vw;
+    font-size: 20vw;
+    margin-right: 20px;
+  }
+  .hour::after,
+  .minute::after {
+    content: ":";
+    font-size: 20vw;
+    position: relative;
+    left: 3vw;
+  }
+  .sec::after {
+    content: "";
+    font-size: 20vw;
+    position: relative;
+    left: 3vw;
+  }
+  .exp {
+    margin: 50px;
+  }
+}
